@@ -45,12 +45,23 @@ label start:
       "Oh no... 67.":
         jump sixseven
       "SIX SEVENNNN":
-        jump sixseven
+        jump yay
       "NOPE":
         jump sixseven
+
 
 
 label sixseven:
   sixseven "SIX SEVEN SIX SEVEN SIX SEVEN"
   return
 
+label yay:
+ sixseven "YESSS SIX SEVENNN!! I DREW 67 ON MY ARMS 67 TIMES AND HAD TOO MUCH SODAAAA"
+ jump goodending
+
+label goodending:
+  josh "WOW! You survived the hyper 67 kid and Campfire Auckland!"
+
+  show kyle
+  kyle "Good job! I have a microphone and I'm not afraid to use it (SEBASTION TURN OFF OVERFLOW)"
+  return
