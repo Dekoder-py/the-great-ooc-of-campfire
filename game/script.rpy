@@ -1,11 +1,9 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define kyle = Character("Kyle", color="#b4befe")
-define josh = Character("Josh")
-define niko = Character("Niko")
+﻿define kyle = Character("Kyle", color="#b4befe")
+define josh = Character("Josh", color="#89b4fa")
+define sebastian = Character("Sebastian")
+define niko = Character("Niko", color="#94e2d5")
+define mrfraud = Character("Mr Fraud (Niko)", color="#f38ba8")
+define tristian = Character("Tristian")
 
 define sixseven = Character("Six Seven Kid", color="#f38ba8")
 define tom = Character("Tom (Six Seven Kid)", color="#a6e3a1")
@@ -18,8 +16,16 @@ image josh:
   "images/josh.png"
   zoom 9
 
-# The game starts here.
+image tristain:
+  "images/tristian.png"
+  zoom 0.5
 
+image mrfraud:
+  "images/mrfraud.png"
+  zoom 8
+
+image niko:
+  "images/niko.png"
 
 label start:
     scene room
@@ -30,8 +36,20 @@ label start:
 
     hide kyle
 
+    sebastian "I like blinding people with obnoxious lights!"
+
+    show niko
     niko "Please remember the Hack Club CoC applies"
 
+    menu:
+      niko "Have you read the CoC?"
+      "Yes":
+        jump yes
+      "No":
+        hide niko
+        jump angerniko
+
+label back:
     "A few hours later..."
 
     show josh
@@ -52,8 +70,6 @@ label start:
         jump sixseven
       "SIX SEVENNNN":
         jump yay
-      "NOPE":
-        jump sixseven
 
 
 
@@ -63,11 +79,31 @@ label sixseven:
 
 label yay:
  tom "YESSS SIX SEVENNN!! I DREW 67 ON MY ARMS 67 TIMES AND HAD TOO MUCH SODAAAA"
- jump goodending
+ jump continue
+
+label continue:
+  show tristian
+  tristian "*sings* NEVER GONNA GIVE YOU UP"
+  hide tristian
+  jump goodending
 
 label goodending:
+  show josh
   josh "WOW! You survived the hyper 67 kid and Campfire Auckland!"
+  hide josh
 
   show kyle
-  kyle "Good job! I have a microphone and I'm not afraid to use it (SEBASTION TURN OFF OVERFLOW)"
+  kyle "Good job! I have a microphone and I'm not afraid to use it (SEBASTIAN TURN OFF OVERFLOW)"
   return
+
+label angerniko:
+  show mrfraud
+  mrfraud "RAHHHH READ THE COC OR ELSE I'LL HACKATIME BAN YOU"
+  mrfraud "SAY GOODBYE TO YOUR CHARGING PORT!!!"
+  hide mrfraud
+  return
+
+label yes:
+  niko "I'd expect no less."
+  hide niko
+  jump back
