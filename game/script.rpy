@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define kyle = Character("Kyle")
+define kyle = Character("Kyle", color="#b4befe")
 define josh = Character("Josh")
 define niko = Character("Niko")
 
@@ -13,6 +13,10 @@ define tom = Character("Tom (Six Seven Kid)", color="#a6e3a1")
 image kyle:
  "images/kyle.jpg"
  zoom 0.5
+
+image josh:
+  "images/josh.png"
+  zoom 9
 
 # The game starts here.
 
@@ -30,7 +34,11 @@ label start:
 
     "A few hours later..."
 
+    show josh
+
     josh "Campfire Dinner Date???"
+
+    hide josh
 
     show kyle
 
