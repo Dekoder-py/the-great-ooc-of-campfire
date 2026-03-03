@@ -5,7 +5,10 @@
 
 define kyle = Character("Kyle")
 define josh = Character("Josh")
-define sixseven = Character("Six Seven Kid")
+define niko = Character("Niko")
+
+define sixseven = Character("Six Seven Kid", color="#f38ba8")
+define tom = Character("Tom (Six Seven Kid)", color="#a6e3a1")
 
 image kyle:
  "images/kyle.jpg"
@@ -15,22 +18,17 @@ image kyle:
 
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
 
     show kyle
 
     kyle "Welcome to Campfire Auckland!"
 
     hide kyle
+
+    niko "Please remember the Hack Club CoC applies"
+
+    "A few hours later..."
 
     josh "Campfire Dinner Date???"
 
@@ -41,7 +39,7 @@ label start:
     hide kyle
 
     menu:
-      "What's 100 - 33?"
+      sixseven "What's 100 - 33?"
       "Oh no... 67.":
         jump sixseven
       "SIX SEVENNNN":
@@ -56,7 +54,7 @@ label sixseven:
   return
 
 label yay:
- sixseven "YESSS SIX SEVENNN!! I DREW 67 ON MY ARMS 67 TIMES AND HAD TOO MUCH SODAAAA"
+ tom "YESSS SIX SEVENNN!! I DREW 67 ON MY ARMS 67 TIMES AND HAD TOO MUCH SODAAAA"
  jump goodending
 
 label goodending:
