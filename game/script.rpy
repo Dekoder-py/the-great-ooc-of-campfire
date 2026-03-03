@@ -34,8 +34,23 @@ label start:
 
     josh "Campfire Dinner Date???"
 
-    sixseven "SIX SEVEN SIX SEVEN SIX SEVEN"
+    show kyle
 
-    # This ends the game.
+    kyle "AT SHROUD AT SHROUD"
 
-    return
+    hide kyle
+
+    menu:
+      "What's 100 - 33?"
+      "Oh no... 67.":
+        jump sixseven
+      "SIX SEVENNNN":
+        jump sixseven
+      "NOPE":
+        jump sixseven
+
+
+label sixseven:
+  sixseven "SIX SEVEN SIX SEVEN SIX SEVEN"
+  return
+
