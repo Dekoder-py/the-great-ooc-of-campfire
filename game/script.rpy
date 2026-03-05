@@ -5,8 +5,8 @@ define niko = Character("Niko", color="#94e2d5")
 define mrfraud = Character("Mr Fraud (Niko)", color="#f38ba8")
 define tristian = Character("Tristian")
 
-define sixseven = Character("Six Seven Kid", color="#f38ba8")
-define tom = Character("Tom (Six Seven Kid)", color="#a6e3a1")
+define sixseven = Character("Tattoo 67 Kid", color="#f38ba8")
+define tom = Character("Tom (Tattoo 67 Kid)", color="#a6e3a1")
 
 image kyle:
  "images/kyle.jpg"
